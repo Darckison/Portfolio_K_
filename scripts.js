@@ -18,8 +18,13 @@
 */
 
 function trocarCor(cor) {
-  const triangulos = document.querySelectorAll('.triangulo');
+  const resposta = confirm("Gostaria de comprar essa arte ou encomendar?");
+  if (resposta) {
+    // Altere o número abaixo para o seu WhatsApp no formato internacional, sem o +
+    window.open("https://wa.me/5595991736049?text=Olá! Tenho interesse nessa arte.", "_blank");
+  }
 
+  const triangulos = document.querySelectorAll('.triangulo');
   triangulos.forEach((tri) => {
     tri.style.borderBottomColor = cor;
   });
